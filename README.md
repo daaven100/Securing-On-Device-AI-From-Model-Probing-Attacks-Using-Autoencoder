@@ -31,4 +31,4 @@ We implemented a Variational Autoencoder (VAE) for the ImageNet pipeline due to 
 The generated synthetic data was used to train the AE while using the original real dataset for testing only. This improves generalization and can reduce overfitting.
 
 Script included:
-- `ImageNet_VAE.py` – Trains a VAE and generates synthetic benign query samples
+- `Variational Autoencoder Pipeline.py` – Trains a VAE and generates synthetic benign query samples
