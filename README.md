@@ -7,13 +7,13 @@ This repository includes implementations for both ImageNet and CIFAR-10 classifi
 
 Each script has its required dependencies listed at the top of the file. Make sure to install them in your environment before running.
 
-You can download the datasets here:  
+You can download all datasets used in this project here:  https://www.kaggle.com/datasets/drvoyager/model-probing-attack-dataset
 
 Make sure to update the dataset paths in the scripts as needed.
 
-## 2. ImageNet & CIFAR-10 Autoencoders
+## 2. ImageNet & CIFAR-10 Autoencoder
 
-Both ImageNet and CIFAR-10 pipelines use the same medium-term convolutional autoencoder (AE) architecture, designed to detect anomalies in sequences of model queries. The AE monitors 600-query sequences and is trained to reconstruct benign behavior. High reconstruction error or stability deviations signal a potential attack.
+The proposed model uses a convolutional autoencoder architecture, designed to detect anomalies in sequences of model queries. The AE monitors 600-query sequences and is trained to reconstruct benign behavior. High reconstruction error or stability deviations signal a potential attack.
 
 Each AE script performs the following:
 - Preprocessing 
@@ -22,12 +22,11 @@ Each AE script performs the following:
 - An adversarial injection test that simulates hidden attacks within longer benign query streams
 
 Scripts included:
-- `ImageNet_AE.py` – Full AE pipeline for ImageNet
-- `CIFAR10_AE.py` – Full AE pipeline for CIFAR-10
+- `Autoencoder Pipeline.py` – Full AE pipeline for ImageNet & CIFAR-10
 
 ## 3. ImageNet VAE for Synthetic Data
 
-We implemented a Variational Autoencoder (VAE) for the ImageNet pipeline due to its limited benign data. This VAE is trained solely on real benign queries and generates synthetic samples that preserve the characteristics of actual queries.
+We implemented a Variational Autoencoder (VAE) for the ImageNet pipeline due to its limited benign data. This VAE is trained solely on real ImageNet benign queries and generates synthetic samples that preserve the characteristics of actual queries.
 
 The generated synthetic data was used to train the AE while using the original real dataset for testing only. This improves generalization and can reduce overfitting.
 
