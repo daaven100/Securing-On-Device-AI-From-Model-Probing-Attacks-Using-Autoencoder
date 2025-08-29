@@ -22,7 +22,7 @@ Each AE script performs the following:
 - An adversarial injection test that simulates hidden attacks within longer benign query streams
 
 Scripts included:
-- `Autoencoder Pipeline.py` – Full AE pipeline for ImageNet & CIFAR-10
+- `Autoencoder Detection Pipeline.py` – Full AE pipeline for ImageNet & CIFAR-10
 
 ## 3. ImageNet VAE for Synthetic Data
 
